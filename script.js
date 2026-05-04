@@ -2,11 +2,12 @@ let res = document.getElementById("output");
 
 document.addEventListener("DOMContentLoaded", () => {
     let tr = document.createElement("tr");
+	tr.id="loading"
     tr.innerHTML = `<td colspan="2" style="text-align:center;">Loading...</td>`;
-    res.appendChild(tr);
+	res.appendChild(tr);
 
     function createPromise() {
-        let time = Math.random();
+        let time = Math.random()*2+1;
 
         return new Promise((resolve) => {
             setTimeout(() => {
